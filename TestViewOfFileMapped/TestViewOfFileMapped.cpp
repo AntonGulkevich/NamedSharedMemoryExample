@@ -97,7 +97,7 @@ void write_dword(DWORD base, DWORD offset, DWORD data)
 	CloseHandle(hMapObject);
 }
 
-int main()
+int main(int argc, char *argv[])
 {
 	HANDLE hMapObject = CreateFileMapping(INVALID_HANDLE_VALUE, nullptr, PAGE_READWRITE, 0, UBS_MEM_SIZE, MAPFILENAME);
 	if (hMapObject == nullptr) {
